@@ -91,3 +91,25 @@ docker run -it grigorov89/alpine-git:latest sh -c "git clone https://github.com/
 # ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # Step 5 - Edit the Project Description - done
 ```
+
+```bash
+# Task 2 - Hotel Reservations
+# Member 1 - Questioneer (PrettyPeace)
+git branch search-form
+git checkout search-form
+# Make the changes
+git commit -a -m "Implemented Search form functionality"
+git push # error
+git push --set-upstream origin search-form
+# Add pull request
+# Member 2 - Offerer (D-Grigorov)
+git branch our-offers-form
+git checkout our-offers-form
+# Make the changes
+git commit -a -m "Implemented Our Offers form functionality"
+git push --set-upstream origin our-offers-form
+# Add pull request
+# Member 3 - Admin (dimitar-grigorov)
+
+```
+
