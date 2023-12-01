@@ -110,6 +110,18 @@ git commit -a -m "Implemented Our Offers form functionality"
 git push --set-upstream origin our-offers-form
 # Add pull request
 # Member 3 - Admin (dimitar-grigorov)
-
-```
+git branch guest-details-form
+git checkout guest-details-form
+# Make the changes
+git commit -a -m "Implemented Guest Details form functionality"
+git push --set-upstream origin guest-details-form
+# Add pull request
+# Member 4 - Verifier (Coder-BG)
+git branch confirm-reservation-form
+git checkout confirm-reservation-form
+# Make the changes
+git commit -a -m "Implemented Confirm Reservation form functionality"
+git push --set-upstream origin confirm-reservation-form
+# Delete the branches
+# Pull all changes
 
