@@ -89,4 +89,5 @@ cd "$(git rev-parse --show-toplevel)\04-Branching-and-Pull-Requests\01-Towns"
 docker run -it grigorov89/alpine-git:latest sh -c "git clone https://github.com/dimitar-grigorov/SoftUni-DevOps2.git && sh"
 # Generate SSH key and add it to GitHub
 # ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-# Step 5 - Edit the Project Description
+# Step 5 - Edit the Project Description - done
+```
