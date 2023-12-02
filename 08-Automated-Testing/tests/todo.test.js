@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-const serverUrl = "http://localhost:5500";
+const serverUrl = `http://localhost:5500`;
 
 // Verify that user can add a task
 test("user can add a task", async ({ page }) => {
@@ -33,7 +33,7 @@ test("user can complete a task", async ({ page }) => {
     await page.click("#add-task");
 
     // Mark the task as complete
-    await page.click(".task .complete-task");
+    await page.click(".task .task-complete");
 
     const completedTask = await page.$(".task.completed");
 
@@ -47,7 +47,7 @@ test("user can filter tasks", async ({ page }) => {
     await page.click("#add-task");
 
     // Mark the task as complete
-    await page.click(".task .complete-task");
+    await page.click(".task .task-complete");
 
     // Filter the tasks
     await page.selectOption("#filter", "Completed");

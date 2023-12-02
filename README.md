@@ -132,6 +132,12 @@ git push --set-upstream origin confirm-reservation-form
 cd "$(git rev-parse --show-toplevel)\08-Automated-Testing\"
 # Install Playwright
 npm install -D @playwright/test
-
+# Or install dev dependencies
+npm install
+# Write tests
+# In seperate terminal run the app
+npm start
+# Run the tests
+npx playwright test
 
 ```
