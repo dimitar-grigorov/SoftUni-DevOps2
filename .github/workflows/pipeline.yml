@@ -2,26 +2,26 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
-    #paths:
-    #  - '06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry/**'    
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        path: '06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry'    
-    - name: Use Node.js 18
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x
-        cache: 'npm'
-        cache-dependency-path: '**/package-lock.json'
-    - name: Build the app
-      run: npm install
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+
+      - name: Build the app
+        working-directory: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
+        run: npm install

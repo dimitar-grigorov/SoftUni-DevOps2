@@ -153,4 +153,6 @@ npm install
 npm start
 # Run the tests
 npm test
+# GitHub workflows located in .github/workflows
+
 ```
