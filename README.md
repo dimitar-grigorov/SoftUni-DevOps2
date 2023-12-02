@@ -126,10 +126,10 @@ git push --set-upstream origin confirm-reservation-form
 # Pull all changes
 ```
 
-## 08. Automated-Testing
+## 05. Automated-Testing
 
 ```powershell
-cd "$(git rev-parse --show-toplevel)\08-Automated-Testing\"
+cd "$(git rev-parse --show-toplevel)\05-Automated-Testing\"
 # Install Playwright
 npm install -D @playwright/test
 # Or install dev dependencies
