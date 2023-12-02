@@ -25,3 +25,32 @@ test("user can delete a task", async ({ page }) => {
     );
     expect(tasks).not.toContain("Test Task");
 });
+
+// Verify that user can complete a task
+test("user can complete a task", async ({ page }) => {
+    await page.goto(serverUrl);
+    await page.fill("#task-input", "Test Task");
+    await page.click("#add-task");
+
+    // Mark the task as complete
+    await page.click(".task .complete-task");
+
+    const completedTask = await page.$(".task.completed");
+
+    expect(completedTask).not.toBeNull();
+});
+
+// Verify if a user can filter
+test("user can filter tasks", async ({ page }) => {
+    await page.goto(serverUrl);
+    await page.fill("#task-input", "Test Task");
+    await page.click("#add-task");
+
+    // Mark the task as complete
+    await page.click(".task .complete-task");
+
+    // Filter the tasks
+    await page.selectOption("#filter", "Completed");
+    const incompleteTask = await page.$(".task:not(.completed)");
+    expect(incompleteTask).toBeNull();
+});
