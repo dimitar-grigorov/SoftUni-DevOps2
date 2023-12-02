@@ -124,4 +124,14 @@ git commit -a -m "Implemented Confirm Reservation form functionality"
 git push --set-upstream origin confirm-reservation-form
 # Delete the branches
 # Pull all changes
+```
 
+## 08. Automated-Testing
+
+```powershell
+cd "$(git rev-parse --show-toplevel)\08-Automated-Testing\"
+# Install Playwright
+npm install -D @playwright/test
+
+
+```
