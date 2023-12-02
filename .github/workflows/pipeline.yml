@@ -14,16 +14,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          path: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
+          path: "repo" # Use a different path to avoid nested directories
+          submodules: "recursive" # Include submodules if present
 
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          cache-dependency-path: "repo/06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry/**/package-lock.json"
 
       - name: Build the app
-        working-directory: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
+        working-directory: "repo/06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
         run: |
           npm install
