@@ -141,3 +141,16 @@ npm start
 npx playwright test
 
 ```
+
+## 06-CI-CD-in-Git-Hub-Actions
+
+```powershell
+# Task 1 and 2 - Student Registry
+cd "$(git rev-parse --show-toplevel)\06-CI-CD-in-Git-Hub-Actions\01-StudentRegistry"
+# Install dependencies
+npm install
+# Run the app
+npm start
+# Run the tests
+npm test
+```
