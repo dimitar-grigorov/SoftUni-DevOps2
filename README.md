@@ -157,4 +157,8 @@ npm test
 # Test the workflow located in .github/workflows/pipline.yml
 # Task 2 - Student Registry
 # Register to render.com
+# Write down API key and SERVICE_ID
+# Create new secret in GitHub - MY_RENDER_API_KEY, MY_RENDER_SERVICE_ID
+# Create new branch - add-deploy-job
+#
 ```
