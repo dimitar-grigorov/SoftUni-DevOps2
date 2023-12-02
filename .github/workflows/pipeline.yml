@@ -22,5 +22,6 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
     - name: Build the app
       run: npm install
