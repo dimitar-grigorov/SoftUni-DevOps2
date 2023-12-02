@@ -166,3 +166,8 @@ npm test
 # Merge the pull request, delete the branch
 # Check the workflow
 ```
+
+```powershell
+# Task 3 - Library Catalog
+# The solution is in separate repository - https://github.com/dimitar-grigorov/Library-Catalog
+```
