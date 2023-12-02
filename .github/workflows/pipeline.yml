@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
-          cache-dependency-path: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry/**/package-lock.json"
+          cache-dependency-path: "**/package-lock.json"
 
-      - run: tree
       - name: Build the app
         working-directory: "06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
-        run: npm install
+        run: |
+          npm install
