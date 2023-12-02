@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,14 +21,14 @@ jobs:
           path: "repo" # Use a different path to avoid nested directories
           submodules: "recursive" # Include submodules if present
 
-      - name: Use Node.js 18
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: "repo/06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry/**/package-lock.json"
 
       - name: Build the app
         working-directory: "repo/06-CI-CD-in-Git-Hub-Actions/01-StudentRegistry"
-        run: |
-          npm install
+        run: npm install
+      - run: npm test
