@@ -145,7 +145,7 @@ npx playwright test
 ## 06-CI-CD-in-Git-Hub-Actions
 
 ```powershell
-# Task 1 and 2 - Student Registry
+# Task 1 - Student Registry
 cd "$(git rev-parse --show-toplevel)\06-CI-CD-in-Git-Hub-Actions\01-StudentRegistry"
 # Install dependencies
 npm install
@@ -154,5 +154,7 @@ npm start
 # Run the tests
 npm test
 # GitHub workflows located in .github/workflows
-
+# Test the workflow located in .github/workflows/pipline.yml
+# Task 2 - Student Registry
+# Register to render.com
 ```
