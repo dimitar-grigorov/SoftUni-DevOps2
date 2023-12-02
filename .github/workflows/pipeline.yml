@@ -37,6 +37,8 @@ jobs:
   # Render.com
   deploy:
     needs: build
+    # Only run on manual trigger
+    # if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to production
