@@ -171,3 +171,19 @@ npm test
 # Task 3 - Library Catalog
 # The solution is in separate repository - https://github.com/dimitar-grigorov/Library-Catalog
 ```
+
+## 07/10. CI-CD-Jenkins
+
+```powershell
+# Step 1 - Install Jenkins via docker
+#docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts-jdk17
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --privileged --volume jenkins-data:/var/jenkins_home jenkins/jenkins:lts-jdk17
+# Get the initial admin password
+# Open http://localhost:8080/
+# Step 2 - Install local project dependencies
+cd "$(git rev-parse --show-toplevel)\07-CI-CD-Jenkins\Student-Registry"
+npm install
+# Check if the app can be started and run the tests
+npm run
+npm test
+```
