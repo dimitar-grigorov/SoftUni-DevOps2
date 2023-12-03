@@ -177,7 +177,8 @@ npm test
 ```powershell
 # Step 1 - Install Jenkins via docker
 #docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts-jdk17
-docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --privileged --volume jenkins-data:/var/jenkins_home jenkins/jenkins:lts-jdk17
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins --privileged -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts-jdk17
+
 # Get the initial admin password
 # Open http://localhost:8080/
 # Step 2 - Install local project dependencies
@@ -186,4 +187,8 @@ npm install
 # Check if the app can be started and run the tests
 npm run
 npm test
+#Step 3 - Create seperate repository https://github.com/dimitar-grigorov/Student-Registry
+#Step 4 - Create, configure and run Jenkins job
+# run ngrok docker container
+docker run -it -e NGROK_AUTHTOKEN=xyz ngrok/ngrok:latest http host.docker.internal:8080
 ```
