@@ -196,3 +196,21 @@ npm test
 # run ngrok docker container
 docker run -it -e NGROK_AUTHTOKEN=xyz ngrok/ngrok:latest http host.docker.internal:8080
 ```
+
+## 11 Exam Preparation - 1
+
+```powershell
+npm install
+npm start
+# Add .gitingore with node_modules
+# Create new repository and push the code
+# Create new branch - junior-dev
+npm run test:unit
+npx install -D @playwright/test
+npm run test:ui
+# switch to junior-dev branch
+# Fix the tests, commit and create pull request
+# Merge the pull request
+
+
+```
