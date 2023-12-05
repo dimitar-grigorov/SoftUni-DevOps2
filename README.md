@@ -1,5 +1,9 @@
 # SoftUni-DevOps2
 
+```bash
+# npm install - installs the dependencies from package.json
+# npm ci - installs the dependencies from package-lock.json
+```
 
 ## 03. Git Branching and Pull Requests - Lab
 
