@@ -221,8 +221,8 @@ npm run test:ui
 # Stop Auto-Deploy
 # Create new secret in GitHub - MY_RENDER_API_KEY, MY_RENDER_SERVICE_ID
 # Step 6 - Add UI Tests to CI/CD
-
-
-#NOTES: On deploy check the status code
-
 ```
+
+**NOTES:**
+    - On deploy check the status code.
+    - Research how to wait for deploy to finish.
