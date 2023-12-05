@@ -200,6 +200,7 @@ docker run -it -e NGROK_AUTHTOKEN=xyz ngrok/ngrok:latest http host.docker.intern
 ## 11 Exam Preparation - 1
 
 ```powershell
+# Step 1 - 3
 npm install
 npm start
 # Add .gitingore with node_modules
@@ -211,6 +212,17 @@ npm run test:ui
 # switch to junior-dev branch
 # Fix the tests, commit and create pull request
 # Merge the pull request
+# Step 4 - Implement CI
+# Create node.js workflow
+# Solution - 11-Exam-Prep-1/pipline.yml
+# Step 5 - Implement CD - Render.com
+# Create new Web Service and connect it to the GitHub repository
+# Runtime - Node, Build Command - npm install, Start Command - npm start
+# Stop Auto-Deploy
+# Create new secret in GitHub - MY_RENDER_API_KEY, MY_RENDER_SERVICE_ID
+# Step 6 - Add UI Tests to CI/CD
 
+
+#NOTES: On deploy check the status code
 
 ```
