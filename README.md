@@ -223,6 +223,7 @@ git push --set-upstream origin junior-dev
 # Stop Auto-Deploy
 # Create new secret in GitHub - MY_RENDER_API_KEY, MY_RENDER_SERVICE_ID
 # Step 6 - Add UI Tests to CI/CD
+# Dont forget to change localhost to the render.com url!!!
 ```
 
 **NOTES:**
