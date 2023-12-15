@@ -205,10 +205,12 @@ npm install
 npm start
 # Add .gitingore with node_modules
 # Create new repository and push the code
-# Create new branch - junior-dev
 npm run test:unit
 npx install -D @playwright/test
 npm run test:ui
+# Create new branch - junior-dev
+git checkout -b junior-dev
+git push --set-upstream origin junior-dev
 # switch to junior-dev branch
 # Fix the tests, commit and create pull request
 # Merge the pull request
