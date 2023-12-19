@@ -206,7 +206,8 @@ npm start
 # Add .gitingore with node_modules
 # Create new repository and push the code
 npm run test:unit
-npx install -D @playwright/test
+npm install -D @playwright/test
+npx playwright install 
 npm run test:ui
 # Create new branch - junior-dev
 git checkout -b junior-dev
